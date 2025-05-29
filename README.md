@@ -1,6 +1,13 @@
-![lm.c logo](https://placehold.co/600x200/EEE/000?text=lm.c) *lm.c*
+<div align="center">
 
-# lm.c - Lightweight CPU Inference Engine for Large Language Models
+![lm.c logo](https://placehold.co/600x200/EEE/000?text=lm.c) 
+
+*lm.c*
+
+</div>
+
+# lm.c 
+## Lightweight CPU Inference Engine for Large Language Models
 
 **lm.c** is a lightweight, portable, and efficient inference engine designed for running large language models (LLMs) on CPU systems. Built entirely in pure C99, it supports GGUF file format models with all quantization types while maintaining minimal dependencies.
 
@@ -37,6 +44,7 @@ GGML_TYPE_IQ2_S, GGML_TYPE_IQ4_XS, GGML_TYPE_I8, GGML_TYPE_I16,
 GGML_TYPE_I32, GGML_TYPE_I64, GGML_TYPE_F64, GGML_TYPE_IQ1_M
 ```
 
+[**GGUF in detail**](gguf-file-format.md)
 ## Getting Started
 
 ### Prerequisites
@@ -140,7 +148,7 @@ lm.c is released under the MIT License - see [LICENSE](LICENSE) for details.
 ## Acknowledgments
 
 - Inspired by [llama.cpp](https://github.com/ggerganov/llama.cpp)
-- GGUF specification by Georgi Gerganov
+- [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) specification by Georgi Gerganov
 - All open-source LLM researchers and contributors
 
 ---

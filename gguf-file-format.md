@@ -1,3 +1,11 @@
+<div align="center">
+
+![lm.c logo](https://placehold.co/600x200/EEE/000?text=lm.c) 
+
+*lm.c*
+
+</div> 
+
 # GGUF File format
 
 After Training phase, the models based on the llama.cpp architecture can be exchanged using the GGUF (GPT-Generated Unified Format) format.

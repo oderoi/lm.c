@@ -107,7 +107,7 @@ Inspect a GGUF model file:
 ## Architecture Overview
 
 ```mermaid
-graph TD
+graph LR
     A[GGUF File] --> B[Header Parsing]
     B --> C[Metadata Extraction]
     B --> D[Tensor Info Loading]

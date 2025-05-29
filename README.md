@@ -68,30 +68,30 @@ Inspect a GGUF model file:
 ## Example Output
 
 ```
-╔═════════════════════════════════════╗
-║        GGUF File Information        ║
-╠═════════════════════════════════════╣
-║ Magic: GGUF                        ║
-║ Version: 3                         ║
-║ Tensors: 291                       ║
-║ Metadata Entries: 19               ║
-║ Data Offset: 0x0000000000012345    ║
-╠═════════════════════════════════════╣
-║ Metadata:
-║   general.architecture: [string] "llama"
-║   general.name: [string] "LLaMA v2"
-║   llama.context_length: [uint32] 4096
-║   llama.embedding_length: [uint32] 4096
-║   llama.block_count: [uint32] 32
-║   ... (additional metadata)
-╠═════════════════════════════════════╣
-║ Tensors:
-║   token_embd.weight [4096 x 32000] Q4_K @ 0x0000000000010000
-║   output.weight [32000 x 4096] Q6_K @ 0x0000000000a00000
-║   blk.0.attn_q.weight [4096 x 4096] Q8_0 @ 0x0000000001200000
-║   blk.0.attn_k.weight [4096 x 4096] Q8_0 @ 0x0000000001600000
-║   ... (additional tensors)
-╚═════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════╗
+║        GGUF File Information                                  ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Magic: GGUF                                                   ║
+║ Version: 3                                                    ║
+║ Tensors: 291                                                  ║
+║ Metadata Entries: 19                                          ║
+║ Data Offset: 0x0000000000012345                               ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Metadata:                                                     ║
+║   general.architecture: [string] "llama"                      ║
+║   general.name: [string] "LLaMA v2"                           ║
+║   llama.context_length: [uint32] 4096                         ║
+║   llama.embedding_length: [uint32] 4096                       ║
+║   llama.block_count: [uint32] 32                              ║
+║   ... (additional metadata)                                   ║
+╠═══════════════════════════════════════════════════════════════╣
+║ Tensors:                                                      ║
+║   token_embd.weight [4096 x 32000] Q4_K @ 0x0000000000010000  ║
+║   output.weight [32000 x 4096] Q6_K @ 0x0000000000a00000      ║
+║   blk.0.attn_q.weight [4096 x 4096] Q8_0 @ 0x0000000001200000 ║
+║   blk.0.attn_k.weight [4096 x 4096] Q8_0 @ 0x0000000001600000 ║
+║   ... (additional tensors)                                    ║
+╚═══════════════════════════════════════════════════════════════╝
 ```
 
 ## Roadmap

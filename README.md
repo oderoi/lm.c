@@ -78,7 +78,7 @@ graph TD
 
 ### GGUF File Structure
 ```mermaid
-graph LR
+graph TD
     A[Magic Header] --> B[Version]
     B --> C[Tensor Count]
     C --> D[Metadata KVs]
@@ -124,7 +124,7 @@ graph TB
 
 ### Inference Workflow
 ```mermaid
-flowchart LR
+flowchart TD
     A[Input Text] --> B[Tokenization]
     B --> C[Embedding Lookup]
     C --> D[Layer Norm]

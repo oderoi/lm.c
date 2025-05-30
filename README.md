@@ -122,6 +122,11 @@ graph TB
 - **SIMD registers**: Vectorized operations
 - **Thread pools**: Parallel execution
 
+```mermaid
+graph TB
+    
+```
+
 ### Inference Workflow
 ```mermaid
 flowchart TD

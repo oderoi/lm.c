@@ -183,7 +183,6 @@ clang lm.c -o lm -O3 -Wall -Wextra
 ## Example Output
 ```
 
-
 Loading GGUF file: mistral-7b-instruct-v0.2.Q4_K_M.gguf
 ========================================
 ==== Loading GGUF Header ====
@@ -191,6 +190,8 @@ Magic: 0x46554747
 Version: 3
 Tensor Count: 291
 Metadata KV Count: 24
+
+
 
 ==== Loading Metadata Key-Value Store ====
 Metadata[0]: Key='general.architecture', Type=8
@@ -217,6 +218,8 @@ Metadata[20]: Key='tokenizer.ggml.add_bos_token', Type=7
 Metadata[21]: Key='tokenizer.ggml.add_eos_token', Type=7
 Metadata[22]: Key='tokenizer.chat_template', Type=8
 Metadata[23]: Key='general.quantization_version', Type=4
+
+
 
 ==== Loading Tensor Info ====
 Tensor[0]: Name='token_embd.weight', Dims=2, Type=Q4_K, Offset=0
@@ -802,15 +805,21 @@ Tensor[289]: Name='output_norm.weight', Dims=1, Type=F32, Offset=4260167680
 Tensor[290]: Name='output.weight', Dims=2, Type=Q6_K, Offset=4260184064
   Dimensions: 4096x32000
 
+
+
 ==== Loading Tensor Data ====
 Tensor data loaded: 4367704064 bytes
 Tensor data starts at file offset: 735520
+
+
 
 ==== GGUF File Loaded Successfully ====
 File: mistral-7b-instruct-v0.2.Q4_K_M.gguf
 Total file size: 4368439584 bytes
 Tensors: 291
 Metadata entries: 24
+
+
 
 ==== Building Transformer Model Structure ====
 Architecture: llama
@@ -858,20 +867,28 @@ Layer 29: Attn[Q:✓ K:✓ V:✓ O:✓] FFN[W1:✓ W2:✓ W3:✓]
 Layer 30: Attn[Q:✓ K:✓ V:✓ O:✓] FFN[W1:✓ W2:✓ W3:✓]
 Layer 31: Attn[Q:✓ K:✓ V:✓ O:✓] FFN[W1:✓ W2:✓ W3:✓]
 
+
+
 Model Statistics:
 Total Parameters: 7241732096 (7.24B)
 Estimated Model Size: 27625.02 MB
 Actual File Size: 4166.07 MB
 
+
+
 ==== Model Architecture Details ====
 Architecture: llama
 Model Name: mistralai_mistral-7b-instruct-v0.2
+
+
 
 Model Dimensions:
   Hidden Size: 4096
   Intermediate Size: 14336
   Vocabulary Size: 32000
   Max Sequence Length: 32768
+
+
 
 Attention Configuration:
   Number of Heads: 32
@@ -881,18 +898,26 @@ Attention Configuration:
   Using Grouped Query Attention (GQA)
   Query Groups: 4
 
+
+
 Layer Configuration:
   Number of Layers: 32
   RoPE Theta: 10000.0
   RMS Norm Epsilon: 1.000000e-05
 
+
+
 Embedding Layers:
   Token Embeddings: ✓
   Position Embeddings: ✗
 
+
+
 Output Layers:
   Output Norm: ✓
   Output Projection: ✓
+
+
 
 Layer-by-Layer Breakdown:
   Layer  0: Attn[Norm:✓ Q:✓ K:✓ V:✓ O:✓] FFN[Norm:✓ W1:✓ W2:✓ W3:✓]
@@ -928,11 +953,15 @@ Layer-by-Layer Breakdown:
   Layer 30: Attn[Norm:✓ Q:✓ K:✓ V:✓ O:✓] FFN[Norm:✓ W1:✓ W2:✓ W3:✓]
   Layer 31: Attn[Norm:✓ Q:✓ K:✓ V:✓ O:✓] FFN[Norm:✓ W1:✓ W2:✓ W3:✓]
 
+
+
 Model Statistics:
   Total Parameters: 7241732096 (7.24B)
   Estimated Size: 27625.02 MB
   File Size: 4166.07 MB
   Compression Ratio: 6.63x
+
+
 
 First layer query weights data loaded successfully at address: 0x797651d79010
 Tensor: blk.0.attn_q.weight
@@ -940,8 +969,11 @@ Type: Q4_K
 Dimensions: 4096x4096
 Offset: 73728000 bytes
 
+
+
 ==== Model successfully loaded and structured ====
 The transformer model is now ready for inference!
+```
 
 > Initialized Mixtral architecture with 8 experts
 > Processing prompt (128 tokens)...

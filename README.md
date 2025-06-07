@@ -20,6 +20,11 @@
 - 🔍 **Detailed inspection** - View complete model structure and metadata
 - 🧠 **Memory efficient** - Zero-copy tensor access with memory mapping
 
+## What has been DONE so far
+- [x] **🗂️ GGUF Parser**  Handles all metadata types and quantization formats. 
+- [x] **🏭 Model Structure**  Represents transformer architecture with separate Q/K/V weights and proper layer organization.
+
+
 ## Supported Models
 
 lm.c supports **all models** in GGUF format through its architecture-agnostic design, including:
@@ -72,6 +77,7 @@ graph TD
 | Component | Description |
 |-----------|-------------|
 | **🗂️ GGUF Parser** | Handles all metadata types and quantization formats |
+| **🏭 Model Structure** | Represents transformer architecture with separate Q/K/V weights and proper layer organization|
 | **🧠 Quantization Engine** | Supports 30+ GGML quantization formats |
 | **⚡ CPU Inference** | Optimized transformer execution |
 | **🌐 Portable Runtime** | Single-file C99 implementation |

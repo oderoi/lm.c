@@ -161,6 +161,14 @@ flowchart TD
 ```bash
 git clone https://github.com/yourusername/lm.c.git
 cd lm.c
+```
+
+**download any gguf-model from** [Huggingface](https://huggingface.co/models?library=gguf)
+
+*Example*
+```bash
+wget "https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf?download=true"
+```
 
 **Build with GCC**
 ```bash
@@ -175,17 +183,13 @@ clang lm.c -o lm
 ### Usage
 
 **Inspect any GGUF model**
-```bash
-./lm path/to/model.gguf
-```
-
-**Run inference**
 
 *Syntax* : `./lm path/to/model.gguf`
 
 ```bash
 ./lm  "mistral-7b-instruct-v0.2.Q4_K_M.gguf"
 ```
+> Running Inference is comming soon
 
 ## Output
 ```bash
@@ -1012,6 +1016,7 @@ MIT License - see [LICENSE](LICENSE).
 
 - [llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md)
+- [Huggingface](https://huggingface.co/)
 - Open-source LLM community.
 
 ---

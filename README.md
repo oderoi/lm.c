@@ -154,34 +154,41 @@ flowchart TD
 ### Prerequisites
 
 - C compiler (GCC, Clang, or MSVC)
-- Make (optional)
 
 ### Building & Running
 
+**Clone repository**
 ```bash
-# Clone repository
 git clone https://github.com/yourusername/lm.c.git
 cd lm.c
 
-# Build with GCC
-gcc lm.c -o lm -O3 -march=native -Wall -Wextra
+**Build with GCC**
+```bash
+gcc lm.c -o lm 
+```
 
-# Or build with Clang
-clang lm.c -o lm -O3 -Wall -Wextra
+**build with Clang**
+```bash
+clang lm.c -o lm 
 ```
 
 ### Usage
 
+**Inspect any GGUF model**
 ```bash
-# Inspect any GGUF model
 ./lm path/to/model.gguf
-
-# Run inference
-./lm path/to/model.gguf "Your prompt here"
 ```
 
-## Example Output
+**Run inference**
+
+*Syntax* : `./lm path/to/model.gguf`
+
+```bash
+./lm  "mistral-7b-instruct-v0.2.Q4_K_M.gguf"
 ```
+
+## Output
+```bash
 
 Loading GGUF file: mistral-7b-instruct-v0.2.Q4_K_M.gguf
 ========================================
@@ -970,20 +977,14 @@ Dimensions: 4096x4096
 Offset: 73728000 bytes
 
 
-
 ==== Model successfully loaded and structured ====
 The transformer model is now ready for inference!
-```
-
-> Initialized Mixtral architecture with 8 experts
-> Processing prompt (128 tokens)...
-> Generated: 'The Mixtral model produces...' (24 tokens, 256ms)
 ```
 
 ## Roadmap
 
 - [x] GGUF file loader
-- [ ] Tensor data memory mapping
+- [x] Tensor data memory mapping
 - [ ] Quantization/dequantization kernels
 - [ ] Transformer layer implementation
 - [ ] Tokenization and sampling

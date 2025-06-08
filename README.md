@@ -167,7 +167,7 @@ flowchart TD
 
 **Clone repository**
 ```bash
-git clone https://github.com/yourusername/lm.c.git
+git clone https://github.com/oderoi/lm.c.git
 cd lm.c
 ```
 

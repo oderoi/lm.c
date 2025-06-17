@@ -8,6 +8,7 @@
 
 # lm.c 
 **Lightweight CPU Inference Engine for Large Language Models using a single file**
+
 ![**Announcement Blog Poast**](https://www.nileagi.com/blog/lm-c-launch)
 
 **lm.c** is a lightweight, portable, and efficient inference engine designed for running large language models (LLMs) on CPU systems. Built entirely in pure C99, it supports GGUF file format models with all quantization types while maintaining minimal dependencies.

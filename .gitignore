@@ -53,3 +53,7 @@ dkms.conf
 
 # Ignore GGUF model files
 *.gguf
+lm_copy.c
+lm_copy01.c
+lmc.txt
+tinyllama.c

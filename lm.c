@@ -285,7 +285,7 @@ float get_metadata_float(gguf_file_t *gguf, const char *key, float default_val) 
 
 // Build transformer model structure from GGUF file
 transformer_model_t* build_transformer_model(gguf_file_t *gguf) {
-    printf("\n==== Building Transformer Model Structure ====\n");
+    printf("\n=== Building Transformer Model Structure ===\n");
     
     transformer_model_t *model = calloc(1, sizeof(transformer_model_t));
     if (!model) {
@@ -616,7 +616,7 @@ int read_gguf_metadata_value(FILE *fp, gguf_metadata_value_type type, gguf_metad
 
 // 1. Load GGUF Header
 int load_gguf_header(FILE *fp, gguf_header_t *header) {
-    printf("==== Loading GGUF Header ====\n");
+    printf("=== Loading GGUF Header ===\n");
     
     // Read magic number
     if (fread(&header->magic, sizeof(uint32_t), 1, fp) != 1) {
@@ -664,7 +664,7 @@ int load_gguf_header(FILE *fp, gguf_header_t *header) {
 
 // 2. Load Metadata Key-Value Store
 int load_gguf_metadata(FILE *fp, gguf_header_t *header) {
-    printf("\n==== Loading Metadata Key-Value Store ====\n");
+    printf("\n=== Loading Metadata Key-Value Store ===\n");
     
     if (header->metadata_kv_count == 0) {
         header->metadata_kv = NULL;
@@ -706,7 +706,7 @@ int load_gguf_metadata(FILE *fp, gguf_header_t *header) {
 
 // 3. Load Tensor Info
 int load_gguf_tensor_info(FILE *fp, gguf_file_t *gguf) {
-    printf("\n==== Loading Tensor Info ====\n");
+    printf("\n=== Loading Tensor Info ===\n");
     
     if (gguf->header.tensor_count == 0) {
         gguf->tensor_infos = NULL;
@@ -780,7 +780,7 @@ int load_gguf_tensor_info(FILE *fp, gguf_file_t *gguf) {
 
 // 4. Load Tensor Data
 int load_gguf_tensor_data(FILE *fp, gguf_file_t *gguf) {
-    printf("\n==== Loading Tensor Data ====\n");
+    printf("\n=== Loading Tensor Data ===\n");
     
     // Calculate current position and align to tensor data start
     long current_pos = ftell(fp);
@@ -883,7 +883,7 @@ gguf_file_t* load_gguf_file(const char *filename) {
     
     fclose(fp);
     
-    printf("\n==== GGUF File Loaded Successfully ====\n");
+    printf("\n=== GGUF File Loaded Successfully ===\n");
     printf("File: %s\n", filename);
     printf("Total file size: %zu bytes\n", gguf->file_size);
     printf("Tensors: %lu\n", gguf->header.tensor_count);
@@ -920,7 +920,7 @@ uint8_t* get_tensor_data(transformer_model_t *model, gguf_tensor_info_t *tensor)
 void print_model_architecture(transformer_model_t *model) {
     if (!model) return;
     
-    printf("\n==== Model Architecture Details ====\n");
+    printf("\n=== Model Architecture Details ===\n");
     printf("Architecture: %s\n", model->arch ? model->arch : "unknown");
     printf("Model Name: %s\n", model->name ? model->name : "unknown");
     
@@ -1073,7 +1073,7 @@ int main(int argc, char *argv[]) {
     // uint8_t *token_embd_data = get_tensor_data(model, model->token_embd);
     // uint8_t *layer0_ffn_w1_data = get_tensor_data(model, model->layers[0].ffn.w1);
     
-    printf("\n==== Model successfully loaded and structured ====\n");
+    printf("\n=== Model successfully loaded and structured ===\n");
     printf("The transformer model is now ready for inference!\n");
     
     // Clean up
